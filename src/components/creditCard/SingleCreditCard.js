@@ -45,14 +45,14 @@ class SingleCreditCard extends React.Component {
   };
 
   render() {
-    const styleObj = {
-      backgroundColor: this.bgColor,
-      color: this.color,
-    };
-
     return (
       <>
         {this.creditCardsArr.map((elm) => {
+          const styleObj = {
+            backgroundColor: elm.bgColor,
+            color: elm.color,
+          };
+
           return (
             <div className="singleCard creditCard" style={styleObj}>
               <img src={elm.image} alt={elm.type} />
